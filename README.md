@@ -9,10 +9,37 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 ## Introduction - 導入
 
+## Developers - 開発者向け
+
 ## Operating environment - 動作環境
 
-## Developers - 開発者向け
+This is the operating environment of the project creator.
+
+プロジェクト作成者の動作環境です。
+
+OS - Windows 10
+
+CPU - Ryzen 5 3600
+
+GPU - Radeon VEGA 64
+
+RAM - 64GB
+
+DivingStation - Ver 1.4.5
+
+ContactGlove - ContactGlove rev.1(https://store.diver-x.jp/products/contactglove)
+
+Other accessories - Magnetra(https://store.diver-x.jp/products/magnetra)
 
 ## license - ライセンス
 
+Distributed under the MIT License. Please see LICENSE for details.
+
+MITライセンスに基づいて配布されます。詳細につきましては、LICENSEを参照してください。
+
 ## Contact - 問い合わせ先
+
+For support or questions, please contact us below.
+
+- Author Xaccount: https://x.com/Paratap_VRC
+- Author e-mail: nebuibuibui@gmail.com
