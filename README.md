@@ -45,5 +45,7 @@ MITライセンスに基づいて配布されます。詳細につきまして�
 
 For support or questions, please contact us below.
 
+サポートやご質問については、下記までお問い合わせください。
+
 - Author Xaccount: https://x.com/Paratap_VRC
 - Author e-mail: nebuibuibui@gmail.com
