@@ -9,6 +9,8 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 ## Introduction - 導入
 
+## Operation instructions - 操作説明
+
 ## Developers - 開発者向け
 
 We would like to introduce the previous research that we used as reference during development.
