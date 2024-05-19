@@ -9,25 +9,25 @@ using System;
 
 public class BoneAngleReceiver : MonoBehaviour
 {
-    // ƒfƒoƒbƒOUI ƒXƒ‰ƒCƒ_[w’è—p LR•Ê
-    public Slider righthandYawRotationSlider; // ƒXƒ‰ƒCƒ_[ ‰Eè-z
-    public Slider rightThumbRotationSlider; // ƒXƒ‰ƒCƒ_[ ‰Eew
-    public Slider rightIndexRotationSlider; // ƒXƒ‰ƒCƒ_[ ‰El·‚µw
-    public Slider lefthandYawRotationSlider; // ƒXƒ‰ƒCƒ_[ ¶è-z
-    public Slider rightGripForce; // ƒXƒ‰ƒCƒ_[ ‰EèƒOƒŠƒbƒv
-    public RawImage pointer; // ƒ|ƒCƒ“ƒ^[ƒIƒuƒWƒFƒNƒg
+    // ãƒ‡ãƒãƒƒã‚°UI ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼æŒ‡å®šç”¨ LRåˆ¥
+    public Slider righthandYawRotationSlider; // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ å³æ‰‹-z
+    public Slider rightThumbRotationSlider; // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ å³è¦ªæŒ‡
+    public Slider rightIndexRotationSlider; // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ å³äººå·®ã—æŒ‡
+    public Slider lefthandYawRotationSlider; // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ å·¦æ‰‹-z
+    public Slider rightGripForce; // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ å³æ‰‹ã‚°ãƒªãƒƒãƒ—
+    public RawImage pointer; // ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 
-    // èñŒ´“_•â³—pƒpƒ‰ƒ[ƒ^@’²®‰Â”\ LR‹¤—p
+    // æ‰‹é¦–åŸç‚¹è£œæ­£ç”¨ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã€€èª¿æ•´å¯èƒ½ LRå…±ç”¨
     public float deadzoneThreshold = 10.0f;
     public float correctionTimeThreshold = 0.2f;
     public float correctionSpeed = 7.2f;
     
-    // wŒ´“_•â³—pƒpƒ‰ƒ[ƒ^ ’²®‰Â”\ LR‹¤—p
+    // æŒ‡åŸç‚¹è£œæ­£ç”¨ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ èª¿æ•´å¯èƒ½ LRå…±ç”¨
     public float fingerdeadzoneThreshold = 14.0f;
     public float fingerCorrectionTimeThreshold = 0.2f;
     public float fingercorrectionSpeed = 7.2f;
 
-    // “à•”•Ï” LR•Ê
+    // å†…éƒ¨å¤‰æ•° LRåˆ¥
     private float righthandcorrectionTimer = 0.0f;
     private float righthandRotateZ = 0.0f;
     private float lefthandcorrectionTimer = 0.0f;
@@ -39,7 +39,7 @@ public class BoneAngleReceiver : MonoBehaviour
     private float lWristZOrigin = 0.0f;
     private float lWristZOriginPrev = 0.0f;
 
-    // “à•”•Ï” w—p LR•Ê
+    // å†…éƒ¨å¤‰æ•° æŒ‡ç”¨ LRåˆ¥
     private float rightThumbInput = 0.0f;
     private float rightThumbRotation = 0.0f;
     private float rightThumbOrigin = 0.0f;
@@ -62,7 +62,7 @@ public class BoneAngleReceiver : MonoBehaviour
     private float rindexOriginprev = 0.0f;
     private float rmiddleOriginprev = 0.0f;
 
-    // “ü—Í”»’è—p•Ï”@’²®‰Â”\ LR‹¤—p
+    // å…¥åŠ›åˆ¤å®šç”¨å¤‰æ•°ã€€èª¿æ•´å¯èƒ½ LRå…±ç”¨
     public float wristZThresholdMax = 0.18f;
     public float wristZThresholdMiddleMax = 0.06f;
     public float wristZThresholdMin = -0.18f;
@@ -71,24 +71,24 @@ public class BoneAngleReceiver : MonoBehaviour
     public float rIndexThreshold = -0.3f;
     public float rGripThreshold = -0.5f;
 
-    // “ü—Í—\’è•¶š—p•Ï”
+    // å…¥åŠ›äºˆå®šæ–‡å­—ç”¨å¤‰æ•°
     private string charaPlan = "a";
 
-    // “ü—Í•¶š—p•Ï”
+    // å…¥åŠ›æ–‡å­—ç”¨å¤‰æ•°
     private string testTextInput;
     public TMPro.TMP_Text testText;
 
-    // ƒ|ƒCƒ“ƒ^[ˆÚ“®—p•Ï”
+    // ãƒã‚¤ãƒ³ã‚¿ãƒ¼ç§»å‹•ç”¨å¤‰æ•°
     private Vector3 keyPointer = Vector3.zero;
 
-    //ó‘ÔŠÇ——p•Ï” LR•Ê
-    private sbyte rHandAngle; //‰Eèñó‘Ô—p•Ï”A-1‚©‚ç1
-    private sbyte lHandAngle; //¶èñó‘Ô—p•Ï”A-2‚©‚ç2
-    private sbyte touchFinger; //wó‘Ô—p•Ï”A0‚©‚ç2
+    //çŠ¶æ…‹ç®¡ç†ç”¨å¤‰æ•° LRåˆ¥
+    private sbyte rHandAngle; //å³æ‰‹é¦–çŠ¶æ…‹ç”¨å¤‰æ•°ã€-1ã‹ã‚‰1
+    private sbyte lHandAngle; //å·¦æ‰‹é¦–çŠ¶æ…‹ç”¨å¤‰æ•°ã€-2ã‹ã‚‰2
+    private sbyte touchFinger; //æŒ‡çŠ¶æ…‹ç”¨å¤‰æ•°ã€0ã‹ã‚‰2
 
     void Start()
     {
-        // uOSC‚ÌƒƒbƒZ[ƒWóMƒCƒxƒ“ƒg‚ÉƒŠƒXƒi[‚ğ’Ç‰Á
+        // uOSCã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å—ä¿¡ã‚¤ãƒ™ãƒ³ãƒˆã«ãƒªã‚¹ãƒŠãƒ¼ã‚’è¿½åŠ 
         var uOscServer = FindObjectOfType<uOscServer>();
         if (uOscServer != null)
         {
@@ -112,13 +112,13 @@ public class BoneAngleReceiver : MonoBehaviour
         isActivatedGrip();
     }
 
-    // OSCƒAƒhƒŒƒX‚©‚çƒ{[ƒ“‚ÌŠp“xî•ñ‚ğóM
+    // OSCã‚¢ãƒ‰ãƒ¬ã‚¹ã‹ã‚‰ãƒœãƒ¼ãƒ³ã®è§’åº¦æƒ…å ±ã‚’å—ä¿¡
     void OnDataReceived(Message message)
     {
-        // OSCƒAƒhƒŒƒX‚ªƒ{[ƒ“‚ÌŠp“xî•ñ‚Å‚ ‚é‚±‚Æ‚ğŠm”F
+        // OSCã‚¢ãƒ‰ãƒ¬ã‚¹ãŒãƒœãƒ¼ãƒ³ã®è§’åº¦æƒ…å ±ã§ã‚ã‚‹ã“ã¨ã‚’ç¢ºèª
         if (message.address == "/VMC/Ext/Bone/Pos")
         {
-            // ƒƒbƒZ[ƒWƒf[ƒ^‚©‚çƒ{[ƒ“‚Ì–¼‘O‚ÆŠp“x‚ğæ“¾
+            // ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ãƒœãƒ¼ãƒ³ã®åå‰ã¨è§’åº¦ã‚’å–å¾—
             string boneName = (string)message.values[0];
             float rotX = (float)message.values[4];
             float rotY = (float)message.values[5];
@@ -158,7 +158,7 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // ƒOƒŠƒbƒv”»’è
+    // ã‚°ãƒªãƒƒãƒ—åˆ¤å®š
     void isActivatedGrip()
     {
         if (rightMiddleInput <= rGripThreshold)
@@ -171,33 +171,33 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // ‰EèñŒ´“_•â³
+    // å³æ‰‹é¦–åŸç‚¹è£œæ­£
     void rInputCorrection()
     {
         if (isGripActive == false)
         {
-            // “ü—Í‚Ìæ“¾
+            // å…¥åŠ›ã®å–å¾—
             rWristZInput = righthandRotateZ;
 
-            // Œ´“_•â³‚ğ“K—p
+            // åŸç‚¹è£œæ­£ã‚’é©ç”¨
             rWristZInput -= rWristZOrigin;
 
-            // “ü—Í‚Ìâ‘Î’l‚ªƒfƒbƒhƒ][ƒ““à‚©Šm”F
+            // å…¥åŠ›ã®çµ¶å¯¾å€¤ãŒãƒ‡ãƒƒãƒ‰ã‚¾ãƒ¼ãƒ³å†…ã‹ç¢ºèª
             if (Mathf.Abs(rWristZInput) < deadzoneThreshold)
             {
-                // ƒ^ƒCƒ}[‚ğXV
+                // ã‚¿ã‚¤ãƒãƒ¼ã‚’æ›´æ–°
                 righthandcorrectionTimer += Time.deltaTime;
 
-                // ˆê’èŠÔ”ÍˆÍ“à‚É—¯‚Ü‚Á‚½ê‡AŒ´“_‚ğ•â³
+                // ä¸€å®šæ™‚é–“ç¯„å›²å†…ã«ç•™ã¾ã£ãŸå ´åˆã€åŸç‚¹ã‚’è£œæ­£
                 if (righthandcorrectionTimer >= correctionTimeThreshold)
                 {
                     rWristZOrigin = Mathf.Lerp(rWristZOrigin, rWristZOrigin + rWristZInput, correctionSpeed * Time.deltaTime);
-                    righthandcorrectionTimer = 0.0f;  // ƒ^ƒCƒ}[‚ğƒŠƒZƒbƒg
+                    righthandcorrectionTimer = 0.0f;  // ã‚¿ã‚¤ãƒãƒ¼ã‚’ãƒªã‚»ãƒƒãƒˆ
                 }
             }
             else
             {
-                // “ü—Í‚ª”ÍˆÍŠO‚È‚çƒ^ƒCƒ}[‚ğƒŠƒZƒbƒg
+                // å…¥åŠ›ãŒç¯„å›²å¤–ãªã‚‰ã‚¿ã‚¤ãƒãƒ¼ã‚’ãƒªã‚»ãƒƒãƒˆ
                 righthandcorrectionTimer = 0.0f;
             }
             rWristZOriginPrev = rWristZOrigin;
@@ -209,7 +209,7 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // ¶èñŒ´“_•â³
+    // å·¦æ‰‹é¦–åŸç‚¹è£œæ­£
     void lInputCorrection()
     {
         if (isGripActive == false)
@@ -241,7 +241,7 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // ‰El·‚µwŒ´“_•â³
+    // å³äººå·®ã—æŒ‡åŸç‚¹è£œæ­£
     void rIndexCorrection()
     {
         if (isGripActive == false)
@@ -273,7 +273,7 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // ‰EewŒ´“_•â³
+    // å³è¦ªæŒ‡åŸç‚¹è£œæ­£
     void rThumbCorrection()
     {
         if (isGripActive == false)
@@ -305,7 +305,7 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // ‰EƒOƒŠƒbƒvŒ´“_•â³
+    // å³ã‚°ãƒªãƒƒãƒ—åŸç‚¹è£œæ­£
     void rGripCorrection()
     {
         if (isGripActive == false)
@@ -337,7 +337,7 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // “ü—Íƒ|ƒCƒ“ƒ^ˆÚ“®—p
+    // å…¥åŠ›ãƒã‚¤ãƒ³ã‚¿ç§»å‹•ç”¨
     void keyPointerMove()
     {
         keyPointer.x = (-260.0f + (lHandAngle * 104.0f));
@@ -345,16 +345,18 @@ public class BoneAngleReceiver : MonoBehaviour
         pointer.rectTransform.anchoredPosition = new Vector3(keyPointer.x, keyPointer.y,  0.0f);
     }
 
-    // èñŠp“xƒGƒ“ƒR[ƒh
+    // æ‰‹é¦–è§’åº¦ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰
     void wristPosEncoder()
     {
         if (lWristZInput > wristZThresholdMax)
         {
-            lHandAngle = 2;
+            //lHandAngle = 2;
+            lHandAngle = -2;
         }
         else if (lWristZInput > wristZThresholdMiddleMax && lWristZInput <= wristZThresholdMax)
         {
-            lHandAngle = 1;
+            //lHandAngle = 1;
+            lHandAngle = -1;
         }
         else if (lWristZInput <= wristZThresholdMiddleMax && lWristZInput >= wristZThresholdMiddleMin)
         {
@@ -362,11 +364,13 @@ public class BoneAngleReceiver : MonoBehaviour
         }
         else if (lWristZInput < wristZThresholdMiddleMin && lWristZInput >= wristZThresholdMin)
         {
-            lHandAngle = -1;
+            //lHandAngle = -1;
+            lHandAngle = 1;
         }
         else if (lWristZInput < wristZThresholdMin)
         {
-            lHandAngle = -2;
+            //lHandAngle = -2;
+            lHandAngle = 2;
         }
 
         if (rWristZInput > wristZThresholdMax)
@@ -383,25 +387,25 @@ public class BoneAngleReceiver : MonoBehaviour
         }
     }
 
-    // èñ‚ÌŠp“x‚Æw‚Ì‹È‚°‚ğ•¶š‚É•ÏŠ·
+    // æ‰‹é¦–ã®è§’åº¦ã¨æŒ‡ã®æ›²ã’ã‚’æ–‡å­—ã«å¤‰æ›
     void interpreter_Hand2chara()
     {
-        //‰El·‚µw‚Ì“ü—Í‚ªè‡’l‚æ‚è‘å‚«‚¢‚©ƒ`ƒFƒbƒN
+        //å³äººå·®ã—æŒ‡ã®å…¥åŠ›ãŒé–¾å€¤ã‚ˆã‚Šå¤§ãã„ã‹ãƒã‚§ãƒƒã‚¯
         if (rightIndexInput > rIndexThreshold)
         {
             flag_RightIndexMoved = true;
-            //è‡’lˆÈ‰º‚Ìê‡‚ÉƒŠƒZƒbƒgƒtƒ‰ƒO‚ğ—§‚Ä‚éƒtƒ‰ƒO‚ğƒŠƒZƒbƒg
+            //é–¾å€¤ä»¥ä¸‹ã®å ´åˆã«ãƒªã‚»ãƒƒãƒˆãƒ•ãƒ©ã‚°ã‚’ç«‹ã¦ã‚‹ãƒ•ãƒ©ã‚°ã‚’ãƒªã‚»ãƒƒãƒˆ
             flag_RightIndexReset = false;
         }
-        //‰Eew‚Ì“ü—Í‚ªè‡’l‚æ‚è‘å‚«‚¢‚©ƒ`ƒFƒbƒN
+        //å³è¦ªæŒ‡ã®å…¥åŠ›ãŒé–¾å€¤ã‚ˆã‚Šå¤§ãã„ã‹ãƒã‚§ãƒƒã‚¯
         if (rightThumbInput > rThumbThreshold)
         {
             flag_RightThumbMoved = true;
-            //è‡’lˆÈ‰º‚Ìê‡‚ÉƒŠƒZƒbƒgƒtƒ‰ƒO‚ğ—§‚Ä‚éƒtƒ‰ƒO‚ğƒŠƒZƒbƒg
+            //é–¾å€¤ä»¥ä¸‹ã®å ´åˆã«ãƒªã‚»ãƒƒãƒˆãƒ•ãƒ©ã‚°ã‚’ç«‹ã¦ã‚‹ãƒ•ãƒ©ã‚°ã‚’ãƒªã‚»ãƒƒãƒˆ
             flag_RightThumbReset = false;
         }
-        //IndexƒŒƒCƒ„
-        //ew‚Æl·‚µw‚Ìƒtƒ‰ƒO‚ª—§‚Á‚Ä‚¢‚éê‡AˆÈ‰º‚Ìˆ—‚ğs‚¤
+        //Indexãƒ¬ã‚¤ãƒ¤
+        //è¦ªæŒ‡ã¨äººå·®ã—æŒ‡ã®ãƒ•ãƒ©ã‚°ãŒç«‹ã£ã¦ã„ã‚‹å ´åˆã€ä»¥ä¸‹ã®å‡¦ç†ã‚’è¡Œã†
         if (flag_RightIndexMoved && flag_RightThumbMoved)
         {
             if (lHandAngle == -2 && rHandAngle == 1)
@@ -480,12 +484,12 @@ public class BoneAngleReceiver : MonoBehaviour
             }
             else if (lHandAngle == 2 && rHandAngle == -1)
             {
-                // ƒXƒy[ƒXƒL[
+                // ã‚¹ãƒšãƒ¼ã‚¹ã‚­ãƒ¼
                 charaPlan = " ";
                 bothFlagsSet = true;
             }
         }
-        //ew‚Æl·‚µw‚Ìƒtƒ‰ƒO‚ª—§‚Á‚Ä‚¢‚éê‡AˆÈ‰º‚Ìˆ—‚ğs‚¤
+        //è¦ªæŒ‡ã¨äººå·®ã—æŒ‡ã®ãƒ•ãƒ©ã‚°ãŒç«‹ã£ã¦ã„ã‚‹å ´åˆã€ä»¥ä¸‹ã®å‡¦ç†ã‚’è¡Œã†
         if (flag_RightThumbMoved && flag_RightIndexMoved == false)
         {
             if (lHandAngle == -2 && rHandAngle == 1)
@@ -540,7 +544,7 @@ public class BoneAngleReceiver : MonoBehaviour
             }
             else if (lHandAngle == -2 && rHandAngle == -1)
             {
-                //ƒnƒCƒtƒ“
+                //ãƒã‚¤ãƒ•ãƒ³
                 charaPlan = "-";
                 bothFlagsSet = true;
             }
@@ -561,51 +565,51 @@ public class BoneAngleReceiver : MonoBehaviour
             }
             else if (lHandAngle == 2 && rHandAngle == -1)
             {
-                //ƒGƒ“ƒ^[
-                //‰üs
+                //ã‚¨ãƒ³ã‚¿ãƒ¼
+                //æ”¹è¡Œ
                 testTextInput = testTextInput + Environment.NewLine;
                 bothFlagsSet = true;
             }
         }
-        //l·‚µw‚ÆƒOƒŠƒbƒv‚Ìƒtƒ‰ƒO‚ª‚Ç‚¿‚ç‚à—§‚Á‚Ä‚¢‚È‚¢ê‡AˆÈ‰º‚Ìˆ—‚ğs‚¤
+        //äººå·®ã—æŒ‡ã¨ã‚°ãƒªãƒƒãƒ—ã®ãƒ•ãƒ©ã‚°ãŒã©ã¡ã‚‰ã‚‚ç«‹ã£ã¦ã„ãªã„å ´åˆã€ä»¥ä¸‹ã®å‡¦ç†ã‚’è¡Œã†
         if (flag_RightIndexMoved = false && flag_RightThumbMoved == false)
         {
-            //‘Sƒtƒ‰ƒO‚ğ‰Šú‰»
+            //å…¨ãƒ•ãƒ©ã‚°ã‚’åˆæœŸåŒ–
             //flag_RightIndexReset = true;
             //flag_RightThumbReset = true;
-            //‰½‚às‚í‚È‚¢
+            //ä½•ã‚‚è¡Œã‚ãªã„
         }
     }
 
-    // ƒeƒLƒXƒgƒtƒB[ƒh‚É“ü—Í
+    // ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ‰ã«å…¥åŠ›
     void character_Input()
     {
-        //‰Eew‚Ì“ü—Í‚ªè‡’lˆÈ‰º‚©ƒ`ƒFƒbƒN
+        //å³è¦ªæŒ‡ã®å…¥åŠ›ãŒé–¾å€¤ä»¥ä¸‹ã‹ãƒã‚§ãƒƒã‚¯
         if (rightThumbInput <= rThumbThreshold)
         {
         flag_RightThumbReset = true;
         }
 
-        //‰El·‚µw‚Ì“ü—Í‚ªè‡’lˆÈ‰º‚©ƒ`ƒFƒbƒN
+        //å³äººå·®ã—æŒ‡ã®å…¥åŠ›ãŒé–¾å€¤ä»¥ä¸‹ã‹ãƒã‚§ãƒƒã‚¯
         if (rightIndexInput <= rIndexThreshold)
         {
             flag_RightIndexReset = true;
         }
 
-        // —¼•û‚Ìƒtƒ‰ƒO‚ª—§‚Á‚½ó‘Ô‚ÅA‰Eew‚Æl·‚µw‚ªè‡’lˆÈ‰º‚Ìê‡AˆÈ‰º‚Ìˆ—‚ğs‚¤
+        // ä¸¡æ–¹ã®ãƒ•ãƒ©ã‚°ãŒç«‹ã£ãŸçŠ¶æ…‹ã§ã€å³è¦ªæŒ‡ã¨äººå·®ã—æŒ‡ãŒé–¾å€¤ä»¥ä¸‹ã®å ´åˆã€ä»¥ä¸‹ã®å‡¦ç†ã‚’è¡Œã†
         if (bothFlagsSet && flag_RightThumbReset && flag_RightIndexReset == false)
         {
             testTextInput += charaPlan;
             testText.SetText(testTextInput);
-            bothFlagsSet = false; // o—Í‚µ‚½ŒãAƒtƒ‰ƒO‚ğƒŠƒZƒbƒg
+            bothFlagsSet = false; // å‡ºåŠ›ã—ãŸå¾Œã€ãƒ•ãƒ©ã‚°ã‚’ãƒªã‚»ãƒƒãƒˆ
         }
 
-        // —¼•û‚Ìƒtƒ‰ƒO‚ª—§‚Á‚½ó‘Ô‚ÅAew‚ÆƒOƒŠƒbƒv‚ªè‡’lˆÈ‰º‚Ìê‡AˆÈ‰º‚Ìˆ—‚ğs‚¤
+        // ä¸¡æ–¹ã®ãƒ•ãƒ©ã‚°ãŒç«‹ã£ãŸçŠ¶æ…‹ã§ã€è¦ªæŒ‡ã¨ã‚°ãƒªãƒƒãƒ—ãŒé–¾å€¤ä»¥ä¸‹ã®å ´åˆã€ä»¥ä¸‹ã®å‡¦ç†ã‚’è¡Œã†
         if (bothFlagsSet && flag_RightThumbReset && flag_RightIndexReset)
         {
             testTextInput += charaPlan;
             testText.SetText(testTextInput);
-            bothFlagsSet = false; // o—Í‚µ‚½ŒãAƒtƒ‰ƒO‚ğƒŠƒZƒbƒg
+            bothFlagsSet = false; // å‡ºåŠ›ã—ãŸå¾Œã€ãƒ•ãƒ©ã‚°ã‚’ãƒªã‚»ãƒƒãƒˆ
         }
 
         flag_RightIndexMoved = false;
