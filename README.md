@@ -11,6 +11,10 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 ## Developers - 開発者向け
 
+We would like to introduce the previous research that we used as reference during development.
+
+開発に際し参考にさせていただいた先行研究を紹介いたします。
+
 ## Operating environment - 動作環境
 
 This is the operating environment of the project creator.
