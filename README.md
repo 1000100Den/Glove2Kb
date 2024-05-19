@@ -11,6 +11,20 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 ## Operation instructions - 操作説明
 
+![Glove2Kb_Operation (1)](https://github.com/1000100Den/Glove2Kb/assets/52491146/a89b49ac-38ce-4130-9ed7-ff741b81f40f)
+
+There are a total of five types of hand gestures motion used for operation in Glove2Kb: rotation of the left hand/right hand, flexion of the right thumb/right index finger, and flexion (grip) of the right middle finger, ring finger, and little finger.
+
+I will explain using the image above.
+
+For example, if you want to input (p), 1. Bend (grip) the middle finger, ring finger, and little finger of your right hand, 2. Then rotate your right wrist clockwise, your left wrist "small clockwise", and 3. While holding the p/b block, bend and straighten your thumb to input p to the text feed.
+
+Glove2Kbにおいて操作に用いるハンドジェスチャは、左手/右手の回転、右親指/右人差し指の屈曲、右中指-薬指-小指の屈曲（グリップ）の合計5種類となります。
+
+上記の画像を用いて説明いたします。
+
+例えば(p)を入力したい場合、まず右手中指-薬指-小指の屈曲（グリップ）を行い、その後右手首を右回りに、左手首を右回りに"小さく"回転させ、ポインターをp/bのブロックに持って行った状態で、親指を曲げ伸ばしする事でpの入力がテキストフィードへと行われます。
+
 ## Developers - 開発者向け
 
 We would like to introduce the previous research that we used as reference during development.
