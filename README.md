@@ -1,9 +1,11 @@
 ## Glove2Kb: Keyboard input using small step hand gestures using ContactGlove
 Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/lower input costs. It uses ContactGlove's angular velocity sensor and finger tracking.
-(Here is the pre-built executable file (URL link))
+
+([Here is the pre-built executable file](https://nebuibui.booth.pm/items/5757768))
 
 省ステップ/省移動コストによる入力を目標としたハンドジェスチャキーボードのデモ。ContactGloveの角速度センサとフィンガートラッキングを用いています。
-(こちらにビルド済みの実行ファイルがあります(URLリンク))
+
+([こちらにビルド済みの実行ファイルがあります](https://nebuibui.booth.pm/items/5757768))
 
 ![Glove2Kb_Operation_0001](https://github.com/1000100Den/Glove2Kb/assets/52491146/92d56092-18d7-4669-8abb-758cd297f3f1)
 
