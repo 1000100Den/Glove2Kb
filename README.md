@@ -27,6 +27,8 @@ Glove2Kbにおいて操作に用いるハンドジェスチャは、左手/右�
 
 ## Developers - 開発者向け
 
+## References - 参考文献
+
 We would like to introduce the previous research that we used as reference during development.
 
 参考とさせていただいた文献、サイトをご紹介いたします。
