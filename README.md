@@ -15,6 +15,14 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 ## Introduction - 導入
 
+1. DivingStationを起動し、トップの設定（歯車のマーク）をクリックします。
+
+2. (ポート設定)の(VirtualMotionCaptureポート)の横の数字を控えておきます。
+
+3. (VirtualMotionCaptureProtocolで送信)のチェックボックスにチェックを入れます。
+
+4. Glove2Kb.exeを起動後、画面上部のPort Numberと書かれているテキストフィードに2.で控えた数字を入力し、エンターキーを押します。
+
 ## Operation instructions - 操作説明
 
 ![Glove2Kb_Operation (1)](https://github.com/1000100Den/Glove2Kb/assets/52491146/a89b49ac-38ce-4130-9ed7-ff741b81f40f)
