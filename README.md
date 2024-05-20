@@ -7,6 +7,8 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 ## Overview - 概要
 
+![Glove2Kb_Operation_0000](https://github.com/1000100Den/Glove2Kb/assets/52491146/3ac9d473-ebaa-4350-906f-7d1b6aaa844e)
+
 ## Introduction - 導入
 
 ## Operation instructions - 操作説明
