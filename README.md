@@ -29,7 +29,7 @@ Glove2Kbにおいて操作に用いるハンドジェスチャは、左手/右�
 
 We would like to introduce the previous research that we used as reference during development.
 
-開発に際し参考にさせていただいた先行研究、サイトをご紹介いたします。
+参考とさせていただいた文献、サイトをご紹介いたします。
 
 - VRでの画面占有を考慮した文字入力高速化の研究
 - VRにおけるピンチ動作を用いたフリック入力手法に関する研究
