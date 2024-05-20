@@ -29,7 +29,28 @@ Glove2Kbにおいて操作に用いるハンドジェスチャは、左手/右�
 
 We would like to introduce the previous research that we used as reference during development.
 
-開発に際し参考にさせていただいた先行研究を紹介いたします。
+開発に際し参考にさせていただいた先行研究、サイトをご紹介いたします。
+
+- VRでの画面占有を考慮した文字入力高速化の研究
+- VRにおけるピンチ動作を用いたフリック入力手法に関する研究
+- MR環境における文字入力手法の開発
+- 透過型HMDにおけるフリック入力の検討
+- 仮想現実空間でのピンチ動作を用いた覚えやすい文字入力手法
+- HMD前面を用いたVR用フリック文字入力手法
+- HMD前面を用いたVR用フリック文字入力手法の予備評価
+- クロッシングによる選択を用いた仮想現実向けの1次元キーボード
+- クロッシングによる選択を用いた表示面積の小さい仮想現実向け1次元キーボード
+- 手首の屈曲および伸展により操作される仮想キーボードの提案
+- 仮想キーボードの姿勢および形状が入力性能および主観評価に与える影響の調査
+- 日常利用の拡張現実感環境におけるタッチタイピング可能な文字入力システム
+- 立体キーボードを用いたVR向け文字入力手法
+- Quikwriting: Continuous Stylus-based Text Entry
+- PinchType: Text Entry for Virtual and Augmented Reality Using Comfortable Thumb to Fingertip Pinches
+- [「どうぶつの森」の文字入力方式から学ぶUX改善の重要性 - kininarium.](https://kininarium.hateblo.jp/entry/animal_crossing_input_method)
+- [【VR開発】VRならではの日本語入力を作ってみた - Mogura VR News](https://www.moguravr.com/jpn-vr/)
+- [DaisywheelJS, a UI tool for web developers that support the Gamepad API](https://likethemammal.github.io/daisywheeljs/)
+- [Touch typing on a gamepad | krisfris.github.io](https://krisfris.com/2020/07/07/touch-typing-on-a-gamepad.html)
+- [VR中の入力手法について調査してみた【31/31記事目】 - 机上の空論主義者](https://umeboshi-lab.com/entry/2021/05/31/232752)
 
 ## Operating environment - 動作環境
 
@@ -37,19 +58,19 @@ This is the operating environment of the project creator.
 
 プロジェクト作成者の動作環境です。
 
-OS - Windows 10
+- OS - Windows 10
 
-CPU - Ryzen 5 3600
+- CPU - Ryzen 5 3600
 
-GPU - Radeon VEGA 64
+- GPU - Radeon VEGA 64
 
-RAM - 64GB
+- RAM - 64GB
 
-DivingStation - Ver 1.4.5
+- DivingStation - Ver 1.4.5
 
-ContactGlove - ContactGlove rev.1(https://store.diver-x.jp/products/contactglove)
+- ContactGlove - ContactGlove rev.1(https://store.diver-x.jp/products/contactglove)
 
-Other accessories - Magnetra(https://store.diver-x.jp/products/magnetra)
+- Other accessories - Magnetra(https://store.diver-x.jp/products/magnetra)
 
 ## license - ライセンス
 
