@@ -109,6 +109,8 @@ We would like to introduce the previous research that we used as reference durin
   
 - [VR中の入力手法について調査してみた【31/31記事目】 - 机上の空論主義者](https://umeboshi-lab.com/entry/2021/05/31/232752)
 
+- [HandTrackingでのキーボード入力集め - トマシープが学ぶ](https://bibinbaleo.hatenablog.com/entry/2019/12/30/230156)
+  
 ## Operating environment - 動作環境
 
 This is the operating environment of the project creator.
