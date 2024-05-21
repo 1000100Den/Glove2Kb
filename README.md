@@ -8,7 +8,7 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 省ステップ/省移動コストによる入力を目標としたハンドジェスチャキーボードのデモ。ContactGloveの角速度センサとフィンガートラッキングを用いています。
 
-[ビルド済みデモンストレーションアプリのダウンロードはこちらから](https://github.com/1000100Den/Glove2Kb/releases)
+[リリースページ(ビルド済みデモンストレーションアプリのダウンロードはこちらから)](https://github.com/1000100Den/Glove2Kb/releases)
 
 - Glove2Kb v0.1.2
 
