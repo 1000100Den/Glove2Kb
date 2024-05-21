@@ -46,10 +46,14 @@ v0.1.2とv0.2.1の大まかな操作手順はそれぞれ以下の様になり�
 
 - v0.1.2
 
+[English]
+
 1. Bend your right middle finger, ring finger, and little finger  (grip gesture)  to enter input mode.
 2. Rotate your right wrist to select the top and bottom rows, and rotate your left wrist to select the left and right columns.
 3. Select input layer by flexing or non-flexing right index finger
 4. Enter characters with the flexion of your right thumb.
+
+[日本語]
 
 1. 右中指-薬指-小指の屈曲（グリップ）を行い入力モードに入ります
 2. 右手首の回転で上下の行を、左手首の回転で左右の列を選択します
@@ -62,11 +66,15 @@ v0.1.2とv0.2.1の大まかな操作手順はそれぞれ以下の様になり�
 
 - v0.2.1
 
+[English]
+
 1. Bend your right middle finger, ring finger, and little finger (grip gesture) to enter input mode.
 2. Rotate your right wrist to select the top and bottom keys group, and rotate your left wrist to select the left and right keys group.
 3. Select a key in a group of keys using a combination of right thumb/right index finger flexion and right middle finger-ring finger-little finger flexion (grip gesture)
 (From the keys at the bottom of the key group: grip, grip + index finger, grip + thumb, grip + index finger + thumb.)
 4. Undo wrist rotation and enter character.
+
+[日本語]
 
 1. 右中指-薬指-小指の屈曲（グリップ）を行い入力モードに入ります
 2. 右手首の回転で上下のキー群を、左手首の回転で左右のキー群を選択します
