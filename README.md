@@ -40,9 +40,16 @@ For example, if you want to input (p), 1. Bend (grip) the middle finger, ring fi
 
 Glove2Kbにおいて操作に用いるハンドジェスチャは、左手/右手の回転、右親指/右人差し指の屈曲、右中指-薬指-小指の屈曲（グリップ）の合計5種類となります。
 
+The rough operating procedures for v0.1.2 and v0.2.1 are as follows.
+
 v0.1.2とv0.2.1の大まかな操作手順はそれぞれ以下の様になります
 
 - v0.1.2
+
+1. Bend your right middle finger, ring finger, and little finger  (grip gesture)  to enter input mode.
+2. Rotate your right wrist to select the top and bottom rows, and rotate your left wrist to select the left and right columns.
+3. Select input layer by flexing or non-flexing right index finger
+4. Enter characters with the flexion of your right thumb.
 
 1. 右中指-薬指-小指の屈曲（グリップ）を行い入力モードに入ります
 2. 右手首の回転で上下の行を、左手首の回転で左右の列を選択します
@@ -54,6 +61,12 @@ v0.1.2とv0.2.1の大まかな操作手順はそれぞれ以下の様になり�
 例えば(p)を入力したい場合、まず右手中指-薬指-小指の屈曲（グリップ）を行い、その後右手首を右回りに、左手首を右回りに"小さく"回転させ、ポインターをp/bのブロックに持って行った状態で、親指を曲げ伸ばしする事でpの入力がテキストフィードへと行われます。
 
 - v0.2.1
+
+1. Bend your right middle finger, ring finger, and little finger (grip gesture) to enter input mode.
+2. Rotate your right wrist to select the top and bottom keys group, and rotate your left wrist to select the left and right keys group.
+3. Select a key in a group of keys using a combination of right thumb/right index finger flexion and right middle finger-ring finger-little finger flexion (grip gesture)
+(From the keys at the bottom of the key group: grip, grip + index finger, grip + thumb, grip + index finger + thumb.)
+4. Undo wrist rotation and enter character.
 
 1. 右中指-薬指-小指の屈曲（グリップ）を行い入力モードに入ります
 2. 右手首の回転で上下のキー群を、左手首の回転で左右のキー群を選択します
