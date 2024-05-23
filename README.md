@@ -17,7 +17,11 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 - Glove2Kb v0.2.0
 
 ![Glove2Kb_Operation_0002](https://github.com/1000100Den/Glove2Kb/assets/52491146/561c08ec-fc06-47b1-a95e-315a8f8771e9)
-  
+
+- Glove2Kb v0.4.0
+
+![Glove2Kb_Operation_0003](https://github.com/1000100Den/Glove2Kb/assets/52491146/a1b03b6a-eca8-4752-92e5-4345ea7e1f63)
+
 ## Introduction - 導入
 
 1. DivingStationを起動し、トップの設定（歯車のマーク）をクリックします。
