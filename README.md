@@ -22,6 +22,11 @@ Demonstration of a hand gesture keyboard aimed at inputting with fewer steps/low
 
 ![Glove2Kb_Operation_0003](https://github.com/1000100Den/Glove2Kb/assets/52491146/a1b03b6a-eca8-4752-92e5-4345ea7e1f63)
 
+- Glove2Kb v0.5.0
+
+![Glove2Kb_Operation_0006](https://github.com/1000100Den/Glove2Kb/assets/52491146/33a993da-4b40-46bd-ab36-31a4493fc458)
+
+
 ## Introduction - 導入
 
 1. DivingStationを起動し、トップの設定（歯車のマーク）をクリックします。
@@ -135,26 +140,6 @@ We would like to introduce the previous research that we used as reference durin
 - [VR中の入力手法について調査してみた【31/31記事目】 - 机上の空論主義者](https://umeboshi-lab.com/entry/2021/05/31/232752)
 
 - [HandTrackingでのキーボード入力集め - トマシープが学ぶ](https://bibinbaleo.hatenablog.com/entry/2019/12/30/230156)
-  
-## Operating environment - 動作環境
-
-This is the operating environment of the project creator.
-
-プロジェクト作成者の動作環境です。
-
-- OS - Windows 10
-
-- CPU - Ryzen 5 3600
-
-- GPU - Radeon VEGA 64
-
-- RAM - 64GB
-
-- DivingStation - Ver 1.4.5
-
-- ContactGlove - ContactGlove rev.1(https://store.diver-x.jp/products/contactglove)
-
-- Other accessories - Magnetra(https://store.diver-x.jp/products/magnetra)
 
 ## license - ライセンス
 
