@@ -13,6 +13,13 @@ Linux版はLinux上でビルドしてください。
 Requirements: Python 3.10 or later (check "Add python.exe to PATH" during
 installation).
 
+Run the script in the **project folder** — the `glove2kb-py` folder that
+contains `run.py` and `src\`. If you downloaded a ZIP of the repository,
+that is the inner `glove2kb-py` folder, not the repository root. Copying
+only the build files (`build_windows.bat`, `Glove2Kb-Py.spec`) into an
+empty folder does not work: PyInstaller fails with
+`script '...\run.py' not found`.
+
 1. Double-click `build_windows.bat`, or run it from a command prompt.
    It creates a virtual environment, installs PyInstaller, and builds.
 2. The result is `dist\Glove2Kb-Py.exe` (single file, no console window).
